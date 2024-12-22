@@ -1,10 +1,10 @@
 .section{
-    position: relative;
+    position: fixed;
     height: 100vh;
-   @apply  flex flex-col justify-center border-2  border-black w-52  bg-blue-400 ;
+   @apply  flex flex-col justify-center border-2  border-black w-52 ;
 }
 
 .sec{
    /* @apply flex  w-full h-14 my-2 border-black border-4 ;  */
-   @apply flex justify-center my-2 mx-2  hover:border-2 rounded-xl hover:border-blue-200 w-44 h-14 text-white font-serif items-center;
+   @apply flex justify-center my-2 mx-2 cursor-pointer hover:border-2 rounded-xl hover:border-blue-300 w-44 h-14  font-serif items-center;
 }

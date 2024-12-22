@@ -2,26 +2,29 @@ import Image from "next/image"
 import Link from "next/link"
 import './menu.css'
 
-export type MenuProps = {
-    menuItemsArray: [{imag:string , name:string}]
+export type MenuDetails = {
+    imag: string,
+    name: string,
+    linkToNavigate?: string
 };
 
-export const Menu = ({ menuItemsArray: menuItems }: MenuProps) => {
-    console.log(menuItems);
+export type MenuProps = {
+    menuItemsArray: MenuDetails[],
+    className?: string
+};
+
+export const Menu = ({ menuItemsArray: menuItems, className }: MenuProps) => {
     return (
-        <>
-            <div className="flex h-96">
-                <div className="section">
-                    {menuItems.map((menuItem: any , index : number) => {
-                        console.log(menuItem)
-                        return (
-                        <div className="sec" key={index}>
-                            <Image src={menuItem.imag} width={20} height={20} alt="This is missing"></Image>
-                            <Link href={"/dashboard"}><h1>{menuItem.name}</h1></Link>
-                        </div>)
-                    })}
-                </div>
-            </div>
-        </>
+        <div className={`section ${className}`}>
+            {menuItems.map((menuItem: any, index: number) => {
+                return (
+                    <div className="sec" key={index}>
+                        <Image src={menuItem.imag} width={20} height={20} alt="This is missing"></Image>
+                        {menuItem.linkToNavigate
+                            ? <Link href={menuItem.linkToNavigate}><div>{menuItem.name}</div></Link>
+                            : <div>{menuItem.name}</div>}
+                    </div>)
+            })}
+        </div>
     )
 };
