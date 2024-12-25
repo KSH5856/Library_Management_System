@@ -1,0 +1,15 @@
+.dashboard{
+    @apply border-b-2 p-2  border-gray-500 font-bold text-xl flex justify-start;
+};
+
+.dateContainer{
+    @apply mt-10 mx-6 border-b-2 pb-4  border-gray-500;
+};
+
+.date{
+    @apply bg-gray-300 w-72 py-1 px-2;
+};
+
+.tableContainer{
+    @apply ml-10 mx-6 mt-4 border-b-2 border-gray-600 pb-2;
+};
