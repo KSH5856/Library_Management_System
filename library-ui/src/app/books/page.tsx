@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Menu, MenuProps } from "@/components/menu/menu";
 import { AddBooks } from "@/lib/books/addBooks/addBooks";
 import { Books } from "@/lib/books/books/book";
@@ -15,7 +15,7 @@ const BookPage = () => {
             { imag: "/vercel.svg", name: "Add Book" },
             { imag: "/vercel.svg", name: "Issue Book" },
             { imag: "/vercel.svg", name: "Return Book" },
-        ]
+        ],
     };
     const [selectedAction, setSelectedAction] = useState<BookActions>();
     const onMenuSelect = (action: any) => {
@@ -32,7 +32,7 @@ const BookPage = () => {
             case "Return Book":
                 setSelectedAction("returnBook");
                 break;
-        };
+        }
     };
 
     return (

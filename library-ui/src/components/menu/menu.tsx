@@ -20,7 +20,6 @@ export const Menu = ({
     className,
     captureMenuItem = () => { }
 }: MenuProps) => {
-    console.log(captureMenuItem)
     return (
         <div className={`section ${className}`}>
             {menuItems.map((menuItem: any, index: number) => {

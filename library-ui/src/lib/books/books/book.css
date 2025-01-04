@@ -1,0 +1,15 @@
+.bookTableContainer{
+    width: 80%;
+    @apply ml-4 mt-6;
+}
+
+.selectClasss{
+    min-width: 200px;
+    margin: 5px;
+}
+
+.searchBars{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
