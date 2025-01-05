@@ -1,15 +1,38 @@
 .bookTableContainer{
     width: 80%;
-    @apply ml-4 mt-6;
+}
+
+.titleClass{
+    @apply border-b-2 p-2 mx-4 border-gray-500 font-bold text-xl flex justify-start;
 }
 
 .selectClasss{
-    min-width: 200px;
+    min-width: 150px;
     margin: 5px;
 }
 
 .searchBars{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     margin-top: 10px;
+}
+
+.searchBarss{
+    width: 50%;
+}
+
+.buttonDiv{
+    display: flex;
+    padding-inline: 10px;
+    bottom: 10px;
+    left: 55vb;
+    margin-inline: 4px;
+    position: absolute;
+}
+
+.buttonClass{
+    width: 80px;
+    border-radius: 20px;    
+    @apply ml-5 border-2 bg-slate-300;
 }
